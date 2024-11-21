@@ -14,6 +14,3 @@ Krs.labelLockPick = 'Use lockpick'
 -- sponge
 Krs.iconSponge = 'fa-solid fa-soap'
 Krs.labelSponge = 'Use sponge'
--- impound vehicle
-Krs.iconImpound = 'fa-solid fa-square-parking' 
-Krs.labelImpound = 'Impound Vehicle'
