@@ -1,26 +1,24 @@
-fx_version 'cerulean'
-game 'gta5'
-lua54 'yes'
-
-name 'krs_mechanicmenu'
-author 'Karos#7804'
+fx_version "cerulean"
+use_fxv2_oal "yes"
+lua54 "yes"
+game "gta5"
 version "1.0.0"
+description "A simple interactmechanic system"
+name 'krs_interactmechanic'
+author "karos7804"
 
-client_scripts {
-    
-    'client/*.lua'
+shared_scripts {
+	'@es_extended/imports.lua',
+	'@ox_lib/init.lua',
+	'config.lua'
 }
 
 server_scripts {
- 
-    'server/*.lua'
+	'server/*.lua'
 }
 
-shared_scripts {
-
-    '@es_extended/imports.lua',
-	'@ox_lib/init.lua',
-    'shared/*.lua'
+client_scripts {
+	'client/*.lua'
 }
 
 dependency {
