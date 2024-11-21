@@ -1,21 +1,11 @@
-local oxT = exports.ox_target
-local PlayerData = {}
 
-AddEventHandler('esx:setJob', function(job)
-	PlayerData.job = job
-end)
 
-RegisterCommand('testJob', function()
-    print(PlayerData.job.name)
-end)
-
-oxT:addGlobalVehicle({
+exports.ox_target:addGlobalVehicle({
 	
     {
         icon = Krs.iconFixkit,  
         label = Krs.labelFixkit,
         groups = Krs.jobname,
-        distance = 3,
         canInteract = function(entity)
             return not IsEntityDead(entity)
         end,
@@ -27,7 +17,6 @@ oxT:addGlobalVehicle({
         icon = Krs.iconFlipVehicle, 
         label = Krs.labelFlipVehicle,
         groups = Krs.jobname,
-        distance = 3,
         canInteract = function(entity)
             return not IsEntityDead(entity)
         end,
@@ -39,7 +28,6 @@ oxT:addGlobalVehicle({
         icon = Krs.iconLockPick, 
         label = Krs.labelLockPick,
         groups = Krs.jobname,
-        distance = 3,
         canInteract = function(entity)
             return not IsEntityDead(entity)
         end,
@@ -51,24 +39,11 @@ oxT:addGlobalVehicle({
         icon = Krs.iconSponge, 
         label = Krs.labelSponge,
         groups = Krs.jobname,
-        distance = 3,
         canInteract = function(entity)
             return not IsEntityDead(entity)
         end,
         onSelect = function(data)
             cleanVehicle()
-        end
-    },
-    {
-        icon = Krs.iconImpound, 
-        label = Krs.labelImpound,
-        groups = Krs.jobname,
-        distance = 3,
-        canInteract = function(entity)
-            return not IsEntityDead(entity)
-        end,
-        onSelect = function(data)
-            impoundVehicle()
         end
     },
 })
